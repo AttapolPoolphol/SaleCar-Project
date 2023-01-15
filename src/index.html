@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+</head>
+<body>
+    <!--**************แถบบนสุด************************-->
+    <div class="">
+        <a href="##">logo</a>
+        <a href="##">หน้าแรก</a>
+        <a href="##">ซื้อรถ</a>
+        <a href="##">ติดต่อเรา</a>
+        
+    </div>
+
+
+    <hr>
+    <!--***************Branner*******************-->
+    <div class="w3-content w3-display-container" style="max-width:800px">
+        <img class="mySlides" src="img/car1.png" style="width:100%">
+        <img class="mySlides" src="img/car2.jpg" style="width:100%">
+        <img class="mySlides" src="img/car3.png" style="width:100%">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+      </div>
+      <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        </script>
+
+
+    <!--********************แถบด้านซ้าย********************-->
+    <div class="">
+        <p>ค้นหารถ</p>
+        <input type="text">
+
+        <p>รายละเอียดรถ</p>
+        <select name="brandcar" id="brandcar">
+            <option value="car">ยี่ห้อรถ</option>
+        </select><br>
+        <select name="genecar" id="genecar">
+            <option value="car">รุ่น</option>
+        </select>
+            
+        <p>ช่วงราคา</p>
+        <select name="firstprice" id="firstprice">
+            <option value="Fprice">เริ่มต้น</option>
+        </select>
+        <select name="lastprice" id="lastprice">
+            <option value="Lprice">สูงสุด</option>
+        </select>
+    </div>
+
+
+    <!--****************ส่วนกลาง รูปรถ,ข้อมูลรถ***************************-->
+    <div class="">
+        <h2>Carsell รถมือ2</h2>
+        <div class=""> 
+            <a href="##">
+                <img src="" alt="PhothCar">
+                <p>รายละเอียดต่างๆ</p>
+            </a>
+        </div>
+    </div>
+
+
+    <!--*****************ส่วนล่าง*************************-->
+    <div class="">
+        <div class="">
+            <a href="##">Logo</a>
+        </div class>
+        <p>ที่อยู่...........</p>
+        <div class="">
+            <img src="" alt="IconTelphone">            
+        </div>
+        <h2>08x-xxx-xxxx</h2>
+        <h2>Carsell@gmail.com</h2>        
+        <div class="">
+            <a href="">
+                <img src="" alt="facebook">
+            </a>
+        </div>
+        <div class="">
+            <a href="">
+                <img src="" alt="Line">
+            </a>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
